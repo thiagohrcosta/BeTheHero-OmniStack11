@@ -8,7 +8,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <h1>OmniStack - 2020</h1>
+          Projeto - Be The Hero
         </p>
         <a
           className="App-link"
