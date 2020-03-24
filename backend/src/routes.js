@@ -1,16 +1,20 @@
 const express = require("express");
 
+const OngController = require("./controllers/OngControllers");
+
+const connection = require("./database/connection");
+
 const routes = express.Router();
 
-routes.post("/users", function(request, response){
-    const body = request.body;
+/*
+routes.get("/ongs", async (request, response) => {
+    const ongs = await connection("ongs").select("*");
 
-    console.log(body);
+    return response.json(ongs);
+})
 
-    return response.json({
-        evento: "Semana OmniStack 11.0",
-        aluno: "Thiago Costa"
-    });
-});
+*/
+
+routes.post("/ongs", OngController.create);
 
 module.exports = routes;
