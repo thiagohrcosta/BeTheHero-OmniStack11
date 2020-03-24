@@ -31,6 +31,11 @@ app.use(express.json());
   *               para criar ou alterar recursos.
   */
 
+  /**
+   * Driver : SELECT * FROM users
+   * Query Builder: table('users').select('*').where()
+   */
+
 app.post("/users", function(request, response){
     const body = request.body;
 
