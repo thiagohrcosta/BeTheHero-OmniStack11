@@ -16,7 +16,18 @@ const app = express();
  * DELETE: Apagar uma informação no back-end
  */
 
-app.get("/", function(request, response){
+/** ======================================
+  * Tipos de parâmetros:
+  * 
+  * Query: Parâmetros nomeados enviados na rota após
+  *        o símbolo de ? e servem geralmente para
+  *        filtros, paginação. 
+  * 
+  * Route: Parâmetros utilizados para identificar
+  *        recursos.
+  */
+
+app.get("/users", function(request, response){
     return response.json({
         evento: "Semana OmniStack 11.0",
         aluno: "Thiago Costa"
