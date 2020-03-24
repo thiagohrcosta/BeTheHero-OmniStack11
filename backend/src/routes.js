@@ -2,19 +2,13 @@ const express = require("express");
 
 const OngController = require("./controllers/OngControllers");
 
-const connection = require("./database/connection");
+const IncidentController = require("./controllers/IncidentController");
 
 const routes = express.Router();
 
-/*
-routes.get("/ongs", async (request, response) => {
-    const ongs = await connection("ongs").select("*");
-
-    return response.json(ongs);
-})
-
-*/
-
+routes.get("/ongs", OngController.index);
 routes.post("/ongs", OngController.create);
+
+routes.post("/incidents", IncidentController.create);
 
 module.exports = routes;
