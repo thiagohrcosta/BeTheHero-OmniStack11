@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json());
 
 /** ======================================
  * Rota / Recurso
@@ -25,9 +26,16 @@ const app = express();
   * 
   * Route: Parâmetros utilizados para identificar
   *        recursos.
+  * 
+  * Request Body: É o corpo da requisição, utilizado
+  *               para criar ou alterar recursos.
   */
 
-app.get("/users", function(request, response){
+app.post("/users", function(request, response){
+    const body = request.body;
+
+    console.log(body);
+
     return response.json({
         evento: "Semana OmniStack 11.0",
         aluno: "Thiago Costa"
