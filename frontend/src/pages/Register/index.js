@@ -20,12 +20,24 @@ export default function Register() {
             os casos da sua ONG.
           </p>
 
-          <Link className="back-link" to="/register">
+          <Link className="back-link" to="/">
             <FiArrowLeft size={16} color="#E02041" />
             Não tenho cadastro
           </Link>
         </section>
-        <form action=""></form>
+
+        <form action="">
+            <input placeholder="Nome da ONG" />
+            <input type="email" placeholder="E-mail" />
+            <input placeholder="Whatsapp" />
+            
+            <div className="input-group">
+                <input placeholder="Cidade" />
+                <input placeholder="UF" style={{width: 80}} />
+            </div>
+
+            <button className="button" type="submit">Cadastrar</button>
+        </form>
       </div>
     </div>
   );
