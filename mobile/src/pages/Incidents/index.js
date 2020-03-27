@@ -21,9 +21,10 @@ export default function Incidents() {
 
       setIncidents(response.data);
 
+
     }
 
-    useEfect(() => {
+    useEffect(() => {
       loadIncidents();      
     }, []);
 
