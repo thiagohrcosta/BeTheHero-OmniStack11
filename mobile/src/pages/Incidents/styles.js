@@ -60,7 +60,7 @@ export default StyleSheet.create({
         fontSize: 15,
         marginBottom: 24,
         color: '#737380'
-    },
+    }, 
 
     detailsButton: {
         flexDirection: 'row',
