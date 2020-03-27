@@ -1,4 +1,4 @@
-# Be The Hero
+# Be The Hero - Semana OmniStack 11
 ![BeTheHeroProject](https://github.com/thiagohrcosta/BeTheHero-OmniStack11/blob/master/arquivos/BeTheHeroMain.jpg?raw=true)
 
 Projeto desenvolvido durante a **Semana OmniStack 11 - [ROCKETSEAT](https://rocketseat.com.br/)**, com objetivo de construir do zero uma aplicação com backend, frontend e mobile, adotando as principais tecnologias do mercado tais como Node e React. 
@@ -14,4 +14,10 @@ Para rodar o aplicativo em sua máquina efetue o download do projeto e após dev
     mobile: yarn start
 
 Foi utilizado durante o desenvolvimento o aplicativo `expo` que pode ser baixado para os aparelhos móveis em suas respectivas lojas virtuais. Ao utilizar o `expo` lembre-se de alterar o arquivo `api.js` dentro da pasta `mobile > src > services` inserindo o IP da sua máquina. 
+## Etapas de desenvolvimento
 
+ - 23.03.2020 - Configuração do ambiente de desenvolvimento;
+ - 24.03.2020 - Desenvolvimento do backend da aplicação;
+ - 25.03.2020 - Desenvolvimento da interface web da aplicação;
+ - 26.03.2020 - Desenvolvimento da aplicação mobile e finalização do projeto base;
+ - 27.03.2020 - Desenvolvimento de funcionalidades avançadas.
