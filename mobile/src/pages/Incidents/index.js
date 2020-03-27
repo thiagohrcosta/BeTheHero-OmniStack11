@@ -1,40 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { Feather } from "@expo/vector-icons";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 import { View, FlatList, Image, Text, TouchableOpacity } from "react-native";
 
-import api from '../../services/api';
+import api from "../../services/api";
 
 import logoImg from "../../assets/logo.png";
 import styles from "./styles";
 
 export default function Incidents() {
   const [incidents, setIncidents] = useState([]);
-    const navigation = useNavigation();
+  const [total, setTotal] = useState(0);
 
-    function navigateToDetail(){
-        navigation.navigate('Detail');
-    }
+  const navigation = useNavigation();
 
-    async function loadIncidents(){
-      const response = await api.get('incidents');
+  function navigateToDetail() {
+    navigation.navigate("Detail");
+  }
 
-      setIncidents(response.data);
+  async function loadIncidents() {
+    const response = await api.get("incidents");
 
+    setIncidents(response.data);
+    setTotal(response.headers['x-total-count']);
+  }
 
-    }
-
-    useEffect(() => {
-      loadIncidents();      
-    }, []);
-
+  useEffect(() => {
+    loadIncidents();
+  }, []);
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Image source={logoImg} />
         <Text style={styles.headerText}>
-          Total de <Text styles={styles.headerTextBold}>0 casos</Text>.
+          Total de <Text styles={styles.headerTextBold}>{total} casos</Text>.
         </Text>
       </View>
 
@@ -43,34 +43,36 @@ export default function Incidents() {
         Escolha um dos casos abaixo e salve o dia.
       </Text>
 
-    <FlatList 
-        data={[1,2,3,4,5]}
+      <FlatList
+        data={incidents}
         style={styles.incidentList}
-        keyExtractor={incident => String(incident)}
+        keyExtractor={incident => String(incident.id)}
         showsVerticalScrollIndicator={false}
-        renderItem={() => (
-            <View style={styles.incident}>
+        renderItem={({ item: incident }) => (
+          <View style={styles.incident}>
             <Text style={styles.incidentProperty}>ONG:</Text>
-            <Text styles={styles.incidentValue}>HelpCat</Text>
-  
+            <Text styles={styles.incidentValue}>{incident.name}</Text>
+
             <Text styles={styles.incidentProperty}>CASO:</Text>
-            <Text styles={styles.incidentValue}>Cuidados</Text>
-  
+            <Text styles={styles.incidentValue}>{incident.title}</Text>
+
             <Text style={styles.incidentProperty}>VALOR:</Text>
-            <Text style={styles.incidentValue}>R$ 120,00</Text>
-  
-            <TouchableOpacity 
-            style={styles.detailsButton}
-            onPress={navigateToDetail}
+            <Text style={styles.incidentValue}>
+              {Intl.NumberFormat('pt-BR', { 
+                style: 'currency', 
+                currency: 'BRL'}).format(incident.value)}
+            </Text>
+
+            <TouchableOpacity
+              style={styles.detailsButton}
+              onPress={navigateToDetail}
             >
               <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>
               <Feather name="arrow-right" size={17} color="#E02041" />
             </TouchableOpacity>
           </View>
         )}
-    
-    />
-
+      />
     </View>
   );
 }
