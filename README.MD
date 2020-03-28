@@ -21,3 +21,25 @@ Foi utilizado durante o desenvolvimento o aplicativo `expo` que pode ser baixado
  - 25.03.2020 - Desenvolvimento da interface web da aplicação;
  - 26.03.2020 - Desenvolvimento da aplicação mobile e finalização do projeto base;
  - 27.03.2020 - Desenvolvimento de funcionalidades avançadas.
+ ## O que foi utilizado no desenvolvimento do projeto?
+No **backend [(clique aqui para acessar a pasta)](https://github.com/thiagohrcosta/BeTheHero-OmniStack11/tree/master/backend)** utilizou-se:
+ - [Celebrate](https://github.com/arb/celebrate)
+ - [Cors](https://github.com/expressjs/cors)
+ - [Express](https://github.com/expressjs/express)
+ - [Jest](https://github.com/facebook/jest)
+ - [Knex](https://www.npmjs.com/package/knex)
+ - [SqLite3](https://www.npmjs.com/package/sqlite3)
+ - [Nodemon](https://www.npmjs.com/package/nodemon)
+
+Para o **frontend [(clique aqui para acessar a pasta)](https://github.com/thiagohrcosta/BeTheHero-OmniStack11/tree/master/frontend)** utilizou-se:
+
+ - [React](https://github.com/facebook/create-react-app)
+ - [Axios](https://github.com/axios/axios)
+
+Por fim, para o desenvolvimento **mobile [(clique aqui para acessar a pasta)](https://github.com/thiagohrcosta/BeTheHero-OmniStack11/tree/master/mobile)** utilizou-se:
+
+ - [Expo](https://github.com/expo/expo-cli)
+ -  [Axios](https://github.com/axios/axios)
+ - [Intl](https://www.npmjs.com/package/intl)
+ - [React](https://github.com/facebook/create-react-app)
+
