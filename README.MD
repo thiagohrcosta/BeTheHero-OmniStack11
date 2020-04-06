@@ -21,7 +21,7 @@ Foi utilizado durante o desenvolvimento o aplicativo `expo` que pode ser baixado
  - 25.03.2020 - Desenvolvimento da interface web da aplicação;
  - 26.03.2020 - Desenvolvimento da aplicação mobile e finalização do projeto base;
  - 27.03.2020 - Desenvolvimento de funcionalidades avançadas.
- ## O que foi utilizado no desenvolvimento do projeto?
+## O que foi utilizado no desenvolvimento do projeto?
 No **backend [(clique aqui para acessar a pasta)](https://github.com/thiagohrcosta/BeTheHero-OmniStack11/tree/master/backend)** utilizou-se:
  - [Celebrate](https://github.com/arb/celebrate)
  - [Cors](https://github.com/expressjs/cors)
@@ -43,3 +43,5 @@ Por fim, para o desenvolvimento **mobile [(clique aqui para acessar a pasta)](ht
  - [Intl](https://www.npmjs.com/package/intl)
  - [React](https://github.com/facebook/create-react-app)
 
+## Certificado
+![Certificado](https://github.com/thiagohrcosta/BeTheHero-OmniStack11/blob/master/arquivos/certificado.jpg?raw=true)
